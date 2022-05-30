@@ -1,0 +1,18 @@
+'''
+Data Science Jobs Salaries
+'''
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('coursera_data.csv')
+df1 = df.sort_values(by="course_rating")
+df2=df1.head(10)
+df3=df2['course_organization']
+print(df3)
+plt.plot(df3,df2['course_rating'])
+plt.show()
+df1 = df.sort_values(by="course_students_enrolled")
+df2=df1.head(10)
+df3=df2['course_organization']
+print(df3)
+plt.plot(df3,df2['course_students_enrolled'])
+plt.show()
